@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to top right, slateblue, white);
+}
+
+header nav {
+  position: sticky;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 3.5rem;
+  background: transparent;
+  width: 100vw;
+  margin-top: 0px;
+}
+
+.container {
+    display: grid;
+    /*Using the full width/height of the designated box elements, use fr as in example below */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /*Delete the two lines above and add more/less columns/rows by specifying one more for each below */
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 200px 200px 200px 200px 200px 200px;
+    grid-gap: 10px;
+}
+
+.container .individual {
+  border: 1px solid slateblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px slateblue;
+  background: aliceblue;
+}
+
+.individual input {
+}
+
+label {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.color {
+  border-radius: 5px;
+  background: white;
+  margin: 10px;
+}
+
+.email {
+  margin: 10px;
+}
+
+.submit {
+  background: black;
+  color: white;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.reset {
+  background: magenta;
+  color: aliceblue;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 300px;
+    grid-template-rows: 200px 200px 200px 200px 200px 200px;
+  }
+
+    .container .individual {
+        margin: 10px 0px;
+    }
+
+    .checkbox {
+        flex-direction: column;
+    }
+
+    .btn {
+        margin: 10px 0px;
+    }
+
+    .reset {
+        margin: 10px 0px;
+    }
+
+    .color {
+        margin: 10px 0px;
+    }
+
+    .email {
+        margin: 10px 0px;
+    }
+
+    .submit {
+        margin: 10px 0px;
+    }
+
+    .container {
+        grid-template-columns: 300px;
+        grid-template-rows: 200px 200px 200px 200px 200px 200px;
+    }
+    
+}
